@@ -1,7 +1,7 @@
 
 
 /* 'revert font to whitney' */
-/* v1 (custom css ver) */
+/* v1 ('smack it into the custom css box' version) */
 /* pontmakesthings.github.io */
 
 /* !!!! PLEASE NOTE !!!! */
