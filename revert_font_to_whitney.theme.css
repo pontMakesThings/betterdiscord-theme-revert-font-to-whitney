@@ -1,0 +1,35 @@
+/**
+ * @name Revert Font to Whitney
+ * @author pont
+ * @description Stock Discord appearance with 'gg sans' replaced with the previous UI font 'Whitney'. PLEASE NOTE! You will need the Whitney font on your machine for this to function.
+ * @version 1
+ */
+
+/* you'll need to install the Whitney font for this to work: */
+/* https://www.cufonfonts.com/font/whitney-2 */
+
+/* known issue: this outlines emojis in nicknames. don't know how to stop that, sorry! */
+
+
+
+/* override fonts that use gg sans to Whitney (the previous ui font) */
+/* also declare some extra stuff */
+:root{
+    --font-primary: "Whitney","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display: "Whitney","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    --fontfix-text-stroke-width: 0.2px;
+    --fontfix-text-stroke-width-messages: 0.1px;
+}
+
+
+/* fix up individual things around the UI, since the move to gg sans also fucked with these */
+/* restore channel name font weight */
+[aria-label="Channels"] [class^="content-"] * {-webkit-text-stroke: var(--fontfix-text-stroke-width);}
+/* restore userlist name font weight */
+[class^="members-"] [class^="name-"] * {-webkit-text-stroke: var(--fontfix-text-stroke-width);}
+/* restore messages username font weight */
+[class^="chatContent-"] [class^="username-"] {-webkit-text-stroke: var(--fontfix-text-stroke-width-messages);}
+
+/* uncomment this for a cool name background gradient in the message box :) */
+/* [class^="chatContent-"] [class^="username-"] {text-shadow: 0px 0px 50px, 0px 0px 50px, 0px 0px 50px;} */
